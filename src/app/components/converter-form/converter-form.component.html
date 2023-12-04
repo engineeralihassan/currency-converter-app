@@ -1,4 +1,6 @@
   
+  
+  
   <div class="wrapper">
     <header>Currency Converter app in angular</header>
     <form>
@@ -31,6 +33,4 @@
       <button (click)="convertCurrency()">Convert</button>
     </form>
   </div>
-  <div *ngIf="result !== undefined">
-    <p>Result: {{ result | number: '1.2-2' }}</p>
-  </div>
+<app-result [result]="result"></app-result>

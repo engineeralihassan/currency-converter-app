@@ -1,0 +1,8 @@
+.result{
+    width: 100%;
+    padding: 10px 20px;
+    background-color: orangered;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: -40px;
+}
