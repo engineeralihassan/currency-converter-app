@@ -1,0 +1,36 @@
+  
+  <div class="wrapper">
+    <header>Currency Converter app in angular</header>
+    <form>
+      <div class="amount">
+        <p>Enter Amount</p>
+        <input type="number" id="amount" [(ngModel)]="amount" name="amount">
+      </div>
+      <div class="drop-list">
+        <div class="from">
+          <p>From</p>
+          <div class="select-box">
+            <select id="fromCurrency" [(ngModel)]="fromCurrency" name="fromCurrency">
+                <option *ngFor="let currency of currencies" [value]="currency">
+                  {{ currency }}
+                </option>
+              </select>
+          </div>
+        </div>
+        <div class="to">
+          <p>To</p>
+          <div class="select-box">
+            <select id="toCurrency" [(ngModel)]="toCurrency" name="toCurrency">
+                <option *ngFor="let currency of currencies" [value]="currency">
+                  {{ currency }}
+                </option>
+              </select>
+          </div>
+        </div>
+      </div>
+      <button (click)="convertCurrency()">Convert</button>
+    </form>
+  </div>
+  <div *ngIf="result !== undefined">
+    <p>Result: {{ result | number: '1.2-2' }}</p>
+  </div>
